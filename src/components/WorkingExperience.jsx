@@ -16,7 +16,6 @@ export const WorkingExperience = () => {
       </h3>
       <div className="absolute top-20 w-full h-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory">
         <ExperienceCard />
-        <ExperienceCard />
       </div>
     </motion.div>
   );

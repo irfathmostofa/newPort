@@ -8,21 +8,21 @@ import { WorkingExperience } from "./components/WorkingExperience";
 
 function App() {
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-scroll overflow-x-hidden z-0 ">
+    <div className="bg-[rgb(36,36,36)] text-white md:h-screen md:snap-y md:snap-mandatory overflow-scroll overflow-x-hidden z-0 md:scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7Ab0A]/80">
       <Header />
       <section id="hero" className="snap-start">
         <HeroSection />
       </section>
-      <section id="about" className="snap-center">
+      <section id="about" className="md:snap-center">
         <About />
       </section>
-      <section id="experience" className="snap-center">
+      <section id="experience" className="md:snap-center">
         <WorkingExperience />
       </section>
-      <section id="skills" className="snap-center">
+      <section id="skills" className="md:snap-center">
         <Skills />
       </section>
-      <section id="projects" className="snap-center">
+      <section id="projects" className="md:snap-center">
         <Projects />
       </section>
     </div>

@@ -1,19 +1,19 @@
 import React from "react";
-
+import worklopedia from "../assets/proeject-image/worklopedia.png";
 export const Projects = () => {
   const projectsArray = [1, 2, 3, 4, 5];
   return (
-    <div className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center">
-      <h3 className="absolute top-14 uppercase tracking-[20px] text-gray-500 text-2xl">
+    <div className="flex md:relative flex-col mt-20 md:mt-0 text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center">
+      <h3 className="md:absolute top-14 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7Ab0A]/80">
         {projectsArray.map((item) => (
           <>
             <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
-              <div className="grid grid-cols-2 gap-0">
+              <div className="grid md:grid-cols-2 grid-cols-1 gap-0 items-center">
                 <div className="">
-                  <h4 className="text-4xl font-semibold mb-5">Project name</h4>
+                  <h4 className="text-4xl font-semibold mb-5">Worklopedia</h4>
                   <p>
                     Netflix 2.0 app that has a Log In and Log Out Authentication
                     with Google. It has a beautiful Home Screen with all the
@@ -25,10 +25,7 @@ export const Projects = () => {
                 </div>
 
                 <div>
-                  <img
-                    src="https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png"
-                    alt=""
-                  />
+                  <img src={worklopedia} alt="" />
                 </div>
               </div>
             </div>

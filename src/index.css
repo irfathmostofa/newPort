@@ -31,3 +31,9 @@
 .scrollbar-hide::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
+div.scroll-container {
+  display: flex;
+  overflow-x: hidden; /* Hide the default scrollbar */
+  padding: 10px;
+  scroll-behavior: smooth; /* Add smooth scrolling behavior */
+}

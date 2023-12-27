@@ -25,7 +25,7 @@ export const HeroSection = () => {
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[8px]">
           Software Developer
         </h2>
-        <h1 className="text-4xl lg:text-5xl font-semibold px-10">
+        <h1 className="text-3xl lg:text-5xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>

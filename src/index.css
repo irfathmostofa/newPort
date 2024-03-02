@@ -7,7 +7,7 @@
 
 @layer components {
   .heroButton {
-    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40;
+    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-sm tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40 mt-3 md:mt-0;
   }
 }
 /* Add this to your CSS */
@@ -36,4 +36,59 @@ div.scroll-container {
   overflow-x: hidden; /* Hide the default scrollbar */
   padding: 10px;
   scroll-behavior: smooth; /* Add smooth scrolling behavior */
+}
+.contactInput {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+
+.contactInput {
+  border-radius: 0.125rem;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(36 36 36 / var(--tw-border-opacity));
+  background-color: rgba(148, 163, 184, 0.1);
+  padding: 1rem 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.contactInput:focus,
+.contactInput:hover {
+  border-color: rgba(247, 171, 10, 0.4);
+}
+
+.contactInput:focus {
+  color: rgba(247, 171, 10, 0.4);
+}
+.back-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.back-to-top-button button {
+  background-color: #f7ab0a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.back-to-top-button button:hover {
+  background-color: #ffc107;
+}
+
+.back-to-top-button.show button {
+  opacity: 1;
+}
+
+.back-to-top-button.hide button {
+  opacity: 0;
 }

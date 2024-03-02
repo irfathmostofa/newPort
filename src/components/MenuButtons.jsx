@@ -11,10 +11,10 @@ export const MenuButtons = () => {
           {" "}
           <button className="heroButton">Experience</button>
         </a>
-        <a href="#">
+        <a href="#skills">
           <button className="heroButton">Skills</button>
         </a>
-        <a href="#">
+        <a href="#projects">
           <button className="heroButton">Projects</button>
         </a>
       </div>

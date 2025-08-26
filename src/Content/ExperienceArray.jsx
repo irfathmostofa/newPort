@@ -6,7 +6,7 @@ export const ExperienceArray = [
     logo: mpair,
     occupation: "Web Developer",
     company: "mPair Technologies Ltd.",
-    date: "Start work 10/2021 end 10/2023",
+    date: "Start work 10/2022 end 08/2025",
     tech: [
       {
         img: akij,

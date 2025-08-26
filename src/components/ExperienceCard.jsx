@@ -26,7 +26,7 @@ export const ExperienceCard = () => {
               <p className="font-bold md:text-2xl text-md mt-1">
                 {item.company}
               </p>
-              <p>Start work 02/2022 end 12/2022 </p>
+              <p>{item.date}</p>
             </div>
             <div className=" md:w-3/4 w-full">
               <h3 className="font-bold text-lg">Responsibility</h3>

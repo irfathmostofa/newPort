@@ -10,7 +10,7 @@ export const Skills = () => {
       <h3 className="absolute top-28 uppercase tracking-[3px] text-gray-500 text-sm">
         Hover over a skill for current proficiency
       </h3>
-      <div className="grid md:grid-cols-5 grid-cols-3 gap-3 absolute top-[160px]">
+      <div className="grid md:grid-cols-8 grid-cols-3 gap-3 absolute top-[160px]">
         <Skill />
       </div>
     </div>

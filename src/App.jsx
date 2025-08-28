@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./App.css";
 import { About } from "./components/About";
 import BackToTopButton from "./components/BackToTopButton";
@@ -22,8 +22,6 @@ function App() {
     };
 
     window.addEventListener("scroll", toggleVisibility);
-
-    // Initial check when component mounts
     toggleVisibility();
 
     return () => {

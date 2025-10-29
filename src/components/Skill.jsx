@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ReactIcon } from "../assets/custom-icons/react-icon";
 import { SkillsArray } from "../Content/SkillsArray";
 export const Skill = ({ directionLeft }) => {
   return (

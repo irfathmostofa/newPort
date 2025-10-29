@@ -7,33 +7,41 @@ export const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const contactform = (e) => {
-    e.preventDefault();
-    const data = new FormData();
-    data.append("name", name);
-    data.append("email", email);
-    data.append("subject", subject);
-    data.append("message", message);
-    fetch(`${import.meta.env.VITE_SERVER}/contactformSubmit`, {
-      method: "POST",
-      body: data,
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        if (res.message === true) {
-          const successMessage = `Thank you for contacting us, ${name}!`;
-          toast.success(successMessage, {
-            position: "top-center",
-          });
-          setName("");
-          setEmail("");
-          setSubject("");
-          setMessage("");
-        } else {
-          alert("Message Send failed");
-        }
-      })
-      .catch((err) => console.log(err));
+  const contactform = () => {
+    const successMessage = `Thank you for contacting, ${name}!`;
+    toast.success(successMessage, {
+      position: "top-center",
+    });
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
+    // e.preventDefault();
+    // const data = new FormData();
+    // data.append("name", name);
+    // data.append("email", email);
+    // data.append("subject", subject);
+    // data.append("message", message);
+    // fetch(`${import.meta.env.VITE_SERVER}/contactformSubmit`, {
+    //   method: "POST",
+    //   body: data,
+    // })
+    //   .then((res) => res.json())
+    //   .then((res) => {
+    //     if (res.message === true) {
+    //       const successMessage = `Thank you for contacting us, ${name}!`;
+    //       toast.success(successMessage, {
+    //         position: "top-center",
+    //       });
+    //       setName("");
+    //       setEmail("");
+    //       setSubject("");
+    //       setMessage("");
+    //     } else {
+    //       alert("Message Send failed");
+    //     }
+    //   })
+    //   .catch((err) => console.log(err));
   };
 
   return (
@@ -105,10 +113,7 @@ export const Contact = () => {
           </div>
 
           <div className="md:p-10 p-5">
-            <form
-              className="flex flex-col space-y-2 w-full mx-auto"
-              onSubmit={contactform}
-            >
+            <form className="flex flex-col space-y-2 w-full mx-auto">
               <div className="flex space-x-2 ">
                 <input
                   className="contactInput w-full !text-white"
@@ -157,6 +162,7 @@ export const Contact = () => {
               />
               <button
                 type="submit"
+                onClick={contactform}
                 className=" bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg "
               >
                 Submit

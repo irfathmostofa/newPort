@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import aboutimg from "../assets/images/about.jpg";
+import aboutimg from "../assets/images/1737712011573.jpg";
 export const About = () => {
   return (
     <div className="flex flex-col md:relative md:h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
@@ -18,15 +18,15 @@ export const About = () => {
       <div className="space-y-10 px-0 md:px-10 mt-24 md:mt-0">
         <h4 className="text-4xl font-semibold">Here is a little background</h4>
         <p className="md:text-base text-justify">
-          I'm Irfath, an experienced web developer specializing in PHP, Nodejs,
-          Express, MongoDB, React, Next.js, Vue.js, bootstrap, Tailwind CSS And
-          WordPress With expertise in these technologies, I create stunning
-          websites and powerful web applications. Whether it's customizing
-          WordPress, building dynamic user interfaces with React, Next.js, and
-          Vue.js, or architecting robust back-end systems with Nodejs, I
-          consistently deliver exceptional results. From startups to established
-          businesses, I exceed expectations for diverse clients. Let's bring
-          your digital vision to life.
+          Dedicated software developer with nearly five years of hands-on
+          experience in building reliable, user-centric applications. Committed
+          to writing clean, maintainable code and delivering solutions that
+          solve real-world problems and drive meaningful impact.​ Continuously
+          seeking opportunities to enhance user experiences, optimize
+          performance, and architect scalable systems. Known for taking
+          ownership of tasks, thriving in collaborative environments, and
+          embracing continuous learning to grow both technically and
+          professionally.
         </p>
       </div>
     </div>

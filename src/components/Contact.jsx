@@ -1,48 +1,69 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
-  const contactform = () => {
-    const successMessage = `Thank you for contacting, ${name}!`;
-    toast.success(successMessage, {
-      position: "top-center",
-    });
-    setName("");
-    setEmail("");
-    setSubject("");
-    setMessage("");
-    // e.preventDefault();
-    // const data = new FormData();
-    // data.append("name", name);
-    // data.append("email", email);
-    // data.append("subject", subject);
-    // data.append("message", message);
-    // fetch(`${import.meta.env.VITE_SERVER}/contactformSubmit`, {
-    //   method: "POST",
-    //   body: data,
-    // })
-    //   .then((res) => res.json())
-    //   .then((res) => {
-    //     if (res.message === true) {
-    //       const successMessage = `Thank you for contacting us, ${name}!`;
-    //       toast.success(successMessage, {
-    //         position: "top-center",
-    //       });
-    //       setName("");
-    //       setEmail("");
-    //       setSubject("");
-    //       setMessage("");
-    //     } else {
-    //       alert("Message Send failed");
-    //     }
-    //   })
-    //   .catch((err) => console.log(err));
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useRef();
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
+
+  const contactForm = async (e) => {
+    e.preventDefault();
+
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+
+    try {
+      // Using form element directly with EmailJS
+      const result = await emailjs.sendForm(
+        "service_zkaasiw",
+        "template_9z7u0na",
+        form.current,
+        {
+          publicKey: "P9ZGW1VF1qia5P_ng",
+        }
+      );
+
+      if (result.status === 200) {
+        const successMessage = `Thank you for contacting us, ${formData.name}!`;
+        toast.success(successMessage, {
+          position: "top-center",
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      toast.error(`Failed to send message. Please try again later.`, {
+        position: "top-center",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const { name, email, subject, message } = formData;
 
   return (
     <>
@@ -52,9 +73,9 @@ export const Contact = () => {
           Contact
         </h3>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-0 items-center">
-          <div className="">
+          <div className="px-4">
             <h4 className="text-3xl font-semibold">
-              I have got just what you need.
+              I have got just what you need.{" "}
               <span className="decoration-[#F7AB0A]/50 underline">
                 Lets Talk.
               </span>
@@ -74,7 +95,10 @@ export const Contact = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-                <a className="text-2xl" href="tel:+8801941637656">
+                <a
+                  className="text-2xl hover:text-[#F7AB0A] transition-colors"
+                  href="tel:+8801941637656"
+                >
                   +8801941637656
                 </a>
               </div>
@@ -89,7 +113,10 @@ export const Contact = () => {
                   <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                   <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                 </svg>
-                <a className="text-2xl" href="mailto:irfathmostofa1@gmail.com">
+                <a
+                  className="text-2xl hover:text-[#F7AB0A] transition-colors"
+                  href="mailto:irfathmostofa1@gmail.com"
+                >
                   irfathmostofa1@gmail.com
                 </a>
               </div>
@@ -113,59 +140,62 @@ export const Contact = () => {
           </div>
 
           <div className="md:p-10 p-5">
-            <form className="flex flex-col space-y-2 w-full mx-auto">
-              <div className="flex space-x-2 ">
+            <form
+              ref={form}
+              onSubmit={contactForm}
+              className="flex flex-col space-y-2 w-full mx-auto"
+            >
+              <div className="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0">
                 <input
-                  className="contactInput w-full !text-white"
+                  className="contactInput w-full !text-white bg-gray-700/50 rounded-md px-4 py-3 border border-gray-600 focus:border-[#F7AB0A] focus:outline-none transition-colors"
                   placeholder="Name"
                   type="text"
                   name="name"
                   value={name}
-                  onChange={(e) => {
-                    setName(e.target.value);
-                  }}
+                  onChange={handleInputChange}
                   required
+                  disabled={isSubmitting}
                 />
                 <input
-                  className="contactInput w-full !text-white"
+                  className="contactInput w-full !text-white bg-gray-700/50 rounded-md px-4 py-3 border border-gray-600 focus:border-[#F7AB0A] focus:outline-none transition-colors"
                   placeholder="Email"
                   type="email"
                   name="email"
                   value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                  }}
+                  onChange={handleInputChange}
                   required
+                  disabled={isSubmitting}
                 />
               </div>
               <input
-                className="contactInput !text-white"
+                className="contactInput !text-white bg-gray-700/50 rounded-md px-4 py-3 border border-gray-600 focus:border-[#F7AB0A] focus:outline-none transition-colors"
                 placeholder="Subject"
                 type="text"
                 name="subject"
                 value={subject}
-                onChange={(e) => {
-                  setSubject(e.target.value);
-                }}
+                onChange={handleInputChange}
                 required
+                disabled={isSubmitting}
               />
               <textarea
-                className="contactInput h-36 !text-white"
+                className="contactInput h-36 !text-white bg-gray-700/50 rounded-md px-4 py-3 border border-gray-600 focus:border-[#F7AB0A] focus:outline-none transition-colors resize-none"
                 placeholder="Message"
                 name="message"
                 value={message}
-                defaultValue={""}
-                onChange={(e) => {
-                  setMessage(e.target.value);
-                }}
+                onChange={handleInputChange}
                 required
+                disabled={isSubmitting}
               />
               <button
                 type="submit"
-                onClick={contactform}
-                className=" bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg "
+                disabled={isSubmitting}
+                className={`bg-[#F7AB0A] py-4 px-10 rounded-md text-black font-bold text-lg transition-colors ${
+                  isSubmitting
+                    ? "opacity-50 cursor-not-allowed"
+                    : "hover:bg-[#e69a09]"
+                }`}
               >
-                Submit
+                {isSubmitting ? "Sending..." : "Submit"}
               </button>
             </form>
           </div>

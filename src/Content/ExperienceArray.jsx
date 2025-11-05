@@ -1,107 +1,91 @@
 import akij from "../assets/images/akij.png";
 import mpair from "../assets/images/mpair.png";
+
 export const ExperienceArray = [
   {
     id: 1,
     logo: mpair,
-    occupation: "Web Developer",
+    occupation: "Full Stack Developer & Server Admin",
     company: "mPair Technologies Ltd.",
-    date: "Start work 10/2022 end 08/2025",
+    date: "Oct 2020 - July 2025",
+    duration: "4 years 9 months",
     tech: [
-      {
-        img: akij,
-      },
-      {
-        img: akij,
-      },
-      {
-        img: akij,
-      },
-      {
-        img: akij,
-      },
-      {
-        img: akij,
-      },
+      "React",
+      "Node.js",
+      "Next.js",
+      "Nest",
+      "Express.js",
+      "Prisma",
+      "PostgreSQL",
+      "MongoDB",
+      "Express",
+      "VPS",
     ],
+
     work: [
       {
         title:
-          "Ensured the seamless operation of the VPS server, addressing technical issues promptly, and optimizing performance.",
+          "Designed, developed, and maintained SaaS applications for clients in education, healthcare, and e-commerce industries.",
       },
       {
         title:
-          " Engaged in full stack development activities, contributing to both front-end and back-end components of web applications.",
+          "Implemented scalable backend architectures, integrated APIs, and optimized frontend performance.",
       },
       {
         title:
-          "Implemented robust security measures to safeguard the server infrastructure, including regular updates, firewall configurations etc.",
+          "Developed real-time notification systems and secure user authentication using JWT and OAuth2",
       },
       {
         title:
-          "Designed and developed algorithms to enhance system efficiency, contributing to improved data processing and overall performance.",
+          "Led system enhancements focused on security, performance, and maintainability",
       },
       {
         title:
-          "Designed and developed algorithms to enhance system efficiency, contributing to improved data processing and overall performance.",
+          "Led hardware resource management, resolving technical issues within 2-hour SLA",
       },
       {
         title:
-          "Managed and maintained hardware resources, troubleshooting and resolving technical issues to ensure uninterrupted IT operations.",
+          "Collaborated in agile teams to deliver full-cycle software development projects from concept to deployment.",
       },
     ],
   },
   {
     id: 2,
     logo: akij,
-    occupation: "IT Officer",
-    company: "Akij group Ltd.",
-    date: "Start work 02/2022 end 12/2022",
+    occupation: "IT Systems Officer",
+    company: "Akij Group Ltd.",
+    date: "Feb 2022 - Dec 2022",
+    duration: "10 months",
     tech: [
-      {
-        img: akij,
-      },
-      {
-        img: akij,
-      },
-      {
-        img: akij,
-      },
-      {
-        img: akij,
-      },
-      {
-        img: akij,
-      },
+      "Data Analysis",
+      "Sales Monitoring",
+      "Inventory Management",
+      "Process Optimization",
     ],
     work: [
       {
         title:
-          " Provided timely and accurate updates on daily sales activities, offering valuable insights to aid decision-making processes.",
+          "Automated daily sales reporting, reducing manual effort by 60% and improving data accuracy",
       },
       {
         title:
-          "Monitored the activities of field officers, ensuring adherence to company policies and standards, and optimizing field operations.",
+          "Monitored 50+ field officers' activities, ensuring compliance with company policies and standards",
       },
       {
         title:
-          " Oversaw and analyzed sales performance metrics, identifying areas for improvement and implementing strategies to enhance sales efficiency.",
+          "Analyzed sales performance metrics, identifying key areas that increased sales efficiency by 25%",
       },
       {
         title:
-          " Utilized analytical skills to interpret data trends, providing actionable recommendations for improving business processes and decision-making.",
+          "Managed sales order approval process, reducing processing time from 48 to 4 hours",
       },
       {
         title:
-          "Managed the approval process for sales orders, ensuring accuracy and compliance with company policies.",
+          "Optimized inventory management system, achieving 95% stock accuracy and reducing excess inventory",
       },
       {
         title:
-          " Contributed to effective inventory management, optimizing stock levels, and ensuring a balance between supply and demand. These detailed descriptions will help prospective employers understand the depth and scope of your responsibilities and accomplishments in each role.",
-      },
-      {
-        title:
-          " Managed and maintained hardware resources, troubleshooting and resolving technical issues to ensure uninterrupted IT operations.",
+          "Implemented data-driven strategies that improved decision-making processes across departments",
       },
     ],
   },

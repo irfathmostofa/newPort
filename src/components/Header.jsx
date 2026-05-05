@@ -12,7 +12,7 @@ export const Header = () => {
           className="h-24 w-24"
         />
         <SocialIcon
-          url="https://www.linkedin.com/in/irfath-chowdhury-b2754a161/"
+          url="https://www.linkedin.com/in/md-irfath-chowdhury-joy/"
           fgColor="gray"
           bgColor="transparent"
         />

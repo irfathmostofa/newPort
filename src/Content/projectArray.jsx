@@ -1,7 +1,16 @@
+import worklopedia from "../assets/proeject-image/worklopedia.png";
+import amanah from "../assets/proeject-image/amanah.jpg";
+import itphone from "../assets/proeject-image/itphone.jpg";
+import safa from "../assets/proeject-image/safa.jpg";
+import voltech from "../assets/proeject-image/voltech.jpg";
+import sensor from "../assets/proeject-image/sensor.jpg";
+
 export const projectsArray = [
   {
     id: 1,
     name: "Worklopedia",
+    featured: true,
+    image: worklopedia,
     description:
       "A comprehensive professional networking platform that revolutionizes how professionals share and validate workplace experiences. The platform combines anonymous peer reviews, real-time communication, and blog publishing with robust verification systems for compensation data and job experience.",
     tags: ["Social Network", "Professional Platform", "Real-time Chat"],
@@ -18,6 +27,7 @@ export const projectsArray = [
   {
     id: 2,
     name: "School ERP Solution",
+    featured: true,
     description:
       "A comprehensive school management platform that digitizes and streamlines all aspects of educational administration. Successfully deployed in two schools, the system manages academics, HR, transport, library, and fee collection with integrated payment gateways and real-time notifications.",
     tags: ["ERP System", "Education", "Full Stack"],
@@ -43,6 +53,7 @@ export const projectsArray = [
   {
     id: 3,
     name: "FlyDocx - Travel Agency Management",
+    featured: true,
     description:
       "A complete travel agency management solution that centralizes all operational activities including customer management, agent coordination, vendor relationships, accounts, and staff management. The platform ensures data integrity and provides comprehensive tools for agency growth and efficiency.",
     tags: ["Travel Management", "ERP System", "Full Stack"],
@@ -100,7 +111,7 @@ export const projectsArray = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     name: "E-commerce Inventory & POS System",
     description:
       "A sophisticated inventory and point-of-sale system seamlessly integrated with an e-commerce platform. Features real-time stock management, order processing, and an advanced admin dashboard for complete operational control with optimized database performance.",
@@ -117,7 +128,7 @@ export const projectsArray = [
     technologies: ["TypeScript", "Node.js", "Fastify", "PostgreSQL"],
   },
   {
-    id: 6,
+    id: 7,
     name: "Hospital Appointment System",
     description:
       "A patient-centric appointment scheduling platform that simplifies the healthcare booking experience. The system features dynamic availability management, real-time notifications, and seamless appointment confirmations to improve patient engagement and reduce no-shows.",
@@ -134,8 +145,9 @@ export const projectsArray = [
     technologies: ["Vue.js", "Node.js", "Express.js", "Firebase"],
   },
   {
-    id: 7,
+    id: 8,
     name: "Amanah Matrimony",
+    image: amanah,
     description:
       "Bangladesh's premier online matrimonial service, serving the Muslim community since 2015. The platform provides a trusted space for Bangladeshi and Bangladeshi-origin Muslims to find compatible life partners, with inclusive features that welcome all Muslim backgrounds regardless of sect, ethnicity, or profession.",
     tags: ["Matrimonial", "Community Service", "Bangladesh"],
@@ -150,8 +162,9 @@ export const projectsArray = [
     technologies: ["React", "Express.js", "MySQL"],
   },
   {
-    id: 8,
+    id: 9,
     name: "Iqbal & Tareq Mobile Phones LLC",
+    image: itphone,
     description:
       "A leading international mobile communications wholesaler established in 2005. Starting as a family business, the company has evolved into a globally recognized distributor of premium mobile communication products, serving customers worldwide with reliable sourcing and exceptional service.",
     tags: ["E-commerce", "B2B Platform", "International Trade"],
@@ -166,8 +179,9 @@ export const projectsArray = [
     technologies: ["Next.js", "Node.js", "MySQL"],
   },
   {
-    id: 9,
+    id: 10,
     name: "SAFA Fashion House",
+    image: safa,
     description:
       "A dynamic one-stop apparel sourcing and supply solution specializing in woven, knitwear, and sweater manufacturing. Based in Bangladesh, SAFA Fashion House bridges the gap between international fashion brands and quality manufacturing facilities.",
     tags: ["Fashion", "Manufacturing", "Supply Chain"],
@@ -182,8 +196,9 @@ export const projectsArray = [
     technologies: ["Wordpress"],
   },
   {
-    id: 10,
+    id: 11,
     name: "Voltec Engineering Limited",
+    image: voltech,
     description:
       "A premier supplier of industrial automation and control equipment, specializing in AC drive systems, low voltage systems, tank gauging systems, and electrical instruments. Serving major industries including food & beverages, steel, pharmaceuticals, and power generation with cutting-edge automation solutions.",
     tags: ["Industrial Automation", "B2B", "Engineering"],
@@ -198,8 +213,9 @@ export const projectsArray = [
     technologies: ["Wordpress"],
   },
   {
-    id: 11,
+    id: 12,
     name: "SENSOR MART",
+    image: sensor,
     description:
       "A specialized division of Voltec Engineering Limited, dedicated to providing comprehensive sensor and measurement solutions. SENSOR MART combines the trusted legacy of its parent company with innovative approaches to sensor technology, offering excellence in product quality and customer satisfaction.",
     tags: ["Sensors", "Measurement Systems", "Industrial IoT"],

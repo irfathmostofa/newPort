@@ -1,5 +1,3 @@
-import React from "react";
-
 export const MenuButtons = () => {
   return (
     <>
@@ -7,8 +5,10 @@ export const MenuButtons = () => {
         <a href="#about">
           <button className="heroButton">About</button>
         </a>
+        {/* <a href="#journey">
+          <button className="heroButton">Journey</button>
+        </a> */}
         <a href="#experience">
-          {" "}
           <button className="heroButton">Experience</button>
         </a>
         <a href="#skills">
@@ -16,6 +16,9 @@ export const MenuButtons = () => {
         </a>
         <a href="#projects">
           <button className="heroButton">Projects</button>
+        </a>
+        <a href="#services">
+          <button className="heroButton">Services</button>
         </a>
       </div>
     </>

@@ -52,7 +52,7 @@ export const ExperienceArray = [
   {
     id: 2,
     logo: akij,
-    occupation: "IT Systems Officer",
+    occupation: "IT Officer",
     company: "Akij Group Ltd.",
     date: "Feb 2022 - Dec 2022",
     duration: "10 months",

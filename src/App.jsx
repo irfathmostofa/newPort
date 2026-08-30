@@ -6,10 +6,10 @@ import { Contact } from "./components/Contact";
 import { Header } from "./components/Header";
 import { HeroSection } from "./components/HeroSection";
 import { Projects } from "./components/Projects";
+import { Products } from "./components/Products";
 import { Services } from "./components/Services";
 import { Skills } from "./components/Skills";
 import { WorkingExperience } from "./components/WorkingExperience";
-import { Journey } from "./components/Journry";
 import { WhyMe } from "./components/WhyMe";
 
 function App() {
@@ -41,6 +41,10 @@ function App() {
 
           <section id="projects" className="relative">
             <Projects />
+          </section>
+
+          <section id="products" className="relative">
+            <Products />
           </section>
 
           <section id="services" className="relative">

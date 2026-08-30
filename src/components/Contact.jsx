@@ -34,7 +34,6 @@ export const Contact = () => {
 
     if (isSubmitting) return;
 
-    // Basic validation
     if (
       !formData.name.trim() ||
       !formData.email.trim() ||
@@ -51,8 +50,12 @@ export const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Initialize EmailJS with public key
       emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+
+      // Default subject if left blank
+      if (!formData.subject.trim()) {
+        form.current.subject.value = "No subject provided";
+      }
 
       const result = await emailjs.sendForm(
         EMAILJS_CONFIG.SERVICE_ID,
@@ -68,12 +71,7 @@ export const Contact = () => {
           theme: "dark",
         });
 
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         throw new Error("Failed to send message");
       }
@@ -205,6 +203,11 @@ export const Contact = () => {
               className="flex flex-col space-y-3 w-full mx-auto"
             >
               <div className="flex flex-col sm:flex-row sm:space-x-2 space-y-3 sm:space-y-0">
+                <input
+                  type="hidden"
+                  name="time"
+                  value={new Date().toLocaleString()}
+                />
                 <input
                   className="contactInput w-full !text-white bg-gray-700/50 rounded-md px-4 py-3 border border-gray-600 focus:border-[#F7AB0A] focus:outline-none transition-colors"
                   placeholder="Name"

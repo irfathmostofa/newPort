@@ -9,7 +9,6 @@ import css from "../assets/custom-icons/css.png";
 import react from "../assets/custom-icons/react.png";
 import next from "../assets/custom-icons/next.png";
 import vue from "../assets/custom-icons/vue.png";
-import vs from "../assets/custom-icons/vs.png";
 import html from "../assets/custom-icons/html.png";
 import tailwind from "../assets/custom-icons/tailwind.png";
 import bootstrap from "../assets/custom-icons/bootstrap.png";
@@ -69,13 +68,7 @@ const CDN_ICONS = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", // Fallback
 };
 
-// Helper function to create skill object with URL
-const createSkill = (name, url, proficiency) => ({
-  skill: url,
-  proficiency,
-  name, // For debugging/display
-});
-
+// Helper to add CDN icons to the list
 export const SkillsArray = [
   // ====== JavaScript & TypeScript ======
   {

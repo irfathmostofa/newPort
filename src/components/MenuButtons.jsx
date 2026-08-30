@@ -17,6 +17,9 @@ export const MenuButtons = () => {
         <a href="#projects">
           <button className="heroButton">Projects</button>
         </a>
+        <a href="#products">
+          <button className="heroButton">Products</button>
+        </a>
         <a href="#services">
           <button className="heroButton">Services</button>
         </a>

@@ -23,7 +23,7 @@ export const Skills = () => {
         </p>
       </motion.div>
 
-      <div className="max-w-4xl mx-auto grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 sm:gap-5 md:gap-6 justify-items-center">
+      <div className="max-w-4xl mx-auto grid grid-cols-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 sm:gap-5 md:gap-6 justify-items-center">
         <Skill />
       </div>
     </div>

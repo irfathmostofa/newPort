@@ -4,6 +4,11 @@ import itphone from "../assets/proeject-image/itphone.jpg";
 import safa from "../assets/proeject-image/safa.jpg";
 import voltech from "../assets/proeject-image/voltech.jpg";
 import sensor from "../assets/proeject-image/sensor.jpg";
+import school from "../assets/proeject-image/school.jpeg";
+import flydocx from "../assets/proeject-image/flydocx.jpeg";
+import doc from "../assets/proeject-image/doc.jpg";
+import somekoron from "../assets/proeject-image/somekoron.png";
+import ecomerce from "../assets/proeject-image/ecomerce.png";
 
 export const projectsArray = [
   {
@@ -28,6 +33,7 @@ export const projectsArray = [
     id: 2,
     name: "School ERP Solution",
     featured: true,
+    image: school,
     description:
       "A comprehensive school management platform that digitizes and streamlines all aspects of educational administration. Successfully deployed in two schools, the system manages academics, HR, transport, library, and fee collection with integrated payment gateways and real-time notifications.",
     tags: ["ERP System", "Education", "Full Stack"],
@@ -53,7 +59,8 @@ export const projectsArray = [
   {
     id: 3,
     name: "FlyDocx - Travel Agency Management",
-    featured: true,
+
+    image: flydocx,
     description:
       "A complete travel agency management solution that centralizes all operational activities including customer management, agent coordination, vendor relationships, accounts, and staff management. The platform ensures data integrity and provides comprehensive tools for agency growth and efficiency.",
     tags: ["Travel Management", "ERP System", "Full Stack"],
@@ -71,6 +78,7 @@ export const projectsArray = [
   {
     id: 4,
     name: "Someekoron - Project Management Platform",
+    image: somekoron,
     description:
       "An all-in-one project management software designed for agencies to streamline operations from quotation to completion. The platform features comprehensive project tracking, accounts management, resource allocation, and supplier coordination to ensure timely project delivery and financial transparency.",
     tags: ["Project Management", "ERP", "Business Software"],
@@ -113,6 +121,8 @@ export const projectsArray = [
   {
     id: 6,
     name: "E-commerce Inventory & POS System",
+    featured: true,
+    image: ecomerce,
     description:
       "A sophisticated inventory and point-of-sale system seamlessly integrated with an e-commerce platform. Features real-time stock management, order processing, and an advanced admin dashboard for complete operational control with optimized database performance.",
     tags: ["E-commerce", "POS System", "Inventory Management"],
@@ -130,6 +140,7 @@ export const projectsArray = [
   {
     id: 7,
     name: "Hospital Appointment System",
+    image: doc,
     description:
       "A patient-centric appointment scheduling platform that simplifies the healthcare booking experience. The system features dynamic availability management, real-time notifications, and seamless appointment confirmations to improve patient engagement and reduce no-shows.",
     tags: ["Healthcare", "Appointment System", "Full Stack"],

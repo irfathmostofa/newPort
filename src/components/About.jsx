@@ -40,7 +40,7 @@ export const About = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="space-y-4 sm:space-y-6 md:space-y-8 px-0 md:px-4 lg:px-6 md:max-w-xl lg:max-w-2xl text-center md:text-left"
         >
-          <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <h4 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#F7AB0A]  bg-clip-text ">
             Here is a little background
           </h4>
           <p className="text-sm sm:text-base text-gray-300 leading-relaxed text-justify md:text-left">

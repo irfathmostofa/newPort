@@ -233,10 +233,6 @@ export const SkillsArray = [
     proficiency: "65%",
   },
   {
-    skill: CDN_ICONS.terraform,
-    proficiency: "55%",
-  },
-  {
     skill: CDN_ICONS.nginx,
     proficiency: "70%",
   },

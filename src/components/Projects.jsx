@@ -233,6 +233,14 @@ export const Projects = () => {
           </div>
         </div>
       )}
+      <div className="text-center mt-12 md:mt-16">
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#F7AB0A] text-black font-semibold rounded-full hover:bg-amber-500 hover:-translate-y-0.5 transition-all duration-300"
+        >
+          Know More About My Work
+        </a>
+      </div>
     </div>
   );
 };

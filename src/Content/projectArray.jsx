@@ -9,6 +9,7 @@ import flydocx from "../assets/proeject-image/flydocx.jpeg";
 import doc from "../assets/proeject-image/doc.jpg";
 import somekoron from "../assets/proeject-image/somekoron.png";
 import ecomerce from "../assets/proeject-image/ecomerce.png";
+import family from "../assets/proeject-image/family.jpeg";
 
 export const projectsArray = [
   {
@@ -97,6 +98,7 @@ export const projectsArray = [
   {
     id: 5,
     name: "Family Planning System",
+    image: family,
     description:
       "A government-commissioned platform designed to manage and track family planning initiatives across multiple administrative levels. The system features secure role-based access control and enables real-time data tracking for regional health programs with comprehensive performance reporting.",
     tags: ["Government Project", "Healthcare", "Backend Development"],
